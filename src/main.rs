@@ -35,7 +35,7 @@ fn view(app: &App, _model: &Model, frame: Frame) {
     let time = app.time;
     let circle_interval = CIRCLE_INTERVAL;
 
-    let hue = time * COLOR_SPEED_MULTIPLIER % 180.0;
+    let hue = time * COLOR_SPEED_MULTIPLIER % 360.0;
     let color = Hsv::new(hue, 1.0, 1.0);
 
     let total_drop_time = (ROWS * COLUMNS) as f32 * circle_interval;
